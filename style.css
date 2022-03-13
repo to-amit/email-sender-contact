@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'poppins',sans-serif; */
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background: #10131c;
+    display: flex;
+    justify-content: center;
+    /* padding: 50px 0px; */
+    align-items: center;
+    min-height: 100vh;
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 385px;
+    height: 530px;
+    background: rgb(33, 37, 50);
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ h3{
+     font-size: 28px;
+     color: blue;
+ }
+ form input,form textarea{
+    width: 100%;
+    margin: 10px 0px;
+    outline: none;
+    font-size: 16px;
+ }
+ form input{
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid blue;
+    padding: 0px 10px;
+    color: white;
+ }
+ form textarea{
+    border: 1px solid blue;
+    background: rgb(33, 37, 50);
+    margin: 20px 0px;
+    color: white;
+    padding: 8px 12px;
+    resize: none;
+ }
+ ::placeholder{
+     color: white;
+ }
+.btn0{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 22px;
+    margin-top: 16px;
+    font-size: 18px;
+    background: blue;
+    cursor: pointer;
+    color:white;
+ }
+ .btn1{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    margin-top: 33px;
+    font-size: 30px;
+    background: blue;
+    cursor: pointer;
+    color: white;
+ }
+
+ .d0{
+     display: none;
+
+ } 
+ .d1{
+     display: block;
+ }

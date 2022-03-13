@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6bf38b94e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Contact with us</title>
+
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Connect with us</h3>
+            <input type="text " id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Email id" required>
+            <input type="text " id="phone" placeholder="Phone no" required>
+            <textarea name="message" id="message" cols="30" rows="6" placeholder="Your message"></textarea>
+            <button type="submit" class="btn0"> <i class="fa-solid fa-check d0"></i> <span class="d1">Send</span> </button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+           
+            // var btn0 =document.getElementsByClassName('btn0');
+            // // var btn1 =document.getElementsByClassName();
+            // // btn0.classList.add('btn1')
+            // btn0.classList.remove('btn1')
+            
+            Email.send({
+               
+                Host:'smpt.gmail.com',
+                Username:'jjay98221@gmail.com',
+                Password:'Zxcvbnm@2',
+
+                To : 'jjay98221@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact user",
+                Body : "Name: "+document.getElementById("name").value
+                        +"<br> Email: "+document.getElementById("email").value
+                        +"<br> Phone: "+document.getElementById("phone").value 
+                        +"<br> Message: "+document.getElementById("message").value 
+            }).then(
+            message => alert("message sent successfully ")
+            );
+            // var d0 =document.getElementsByClassName("d0");
+
+            // var d1 =document.getElementsByClassName("d1");
+            // d1.style.display='none';
+            // d0.style.display='block';
+
+        }
+    </script>
+</body>
+</html>
